@@ -1,0 +1,38 @@
+
+
+services:
+  add-service:
+    build: ./add-service
+    ports:
+      - "3001:3001"
+  subtract-service:
+    build: ./subtract-service
+    ports:
+      - "3002:3002"
+  divide-service:
+    build: ./divide-service
+    ports:
+      - "3004:3004"
+  multiply-service:
+    build: ./multiply-service
+    ports:
+      - "3003:3003"
+  power-service:
+    build: ./power-service-service
+    ports:
+      - "3005:3005"
+  sqrt-service:
+    build: ./sqrt-service
+    ports:
+      - "3006:3006"
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - add-service
+      - subtract-service
+      - divide-service
+      - multiply-service
+      - power-service
+      - sqrt-service

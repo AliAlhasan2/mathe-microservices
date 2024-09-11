@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator-container">
+    <h1>Mathematischer Rechner</h1>
+    <input type="number" id="value1" placeholder="Erste Zahl">
+    <input type="number" id="value2" placeholder="Zweite Zahl (optional)">
+
+    <div class="operations">
+        <button onclick="calculate('add')">+</button>
+        <button onclick="calculate('subtract')">-</button>
+        <button onclick="calculate('multiply')">*</button>
+        <button onclick="calculate('divide')">/</button>
+        <button onclick="calculate('power')">^</button>
+        <button onclick="calculate('sqrt')">√</button>
+    </div>
+
+    <div id="result">
+        <h2>Ergebnis: <span id="result-value">-</span></h2>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
